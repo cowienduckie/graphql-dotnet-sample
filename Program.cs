@@ -26,12 +26,12 @@ builder.Services
     .AddGraphQLServer()
     .RegisterDbContext<AppDbContext>(DbContextKind.Pooled)
     .AddQueryType<Query>()
+    .AddMutationType<Mutation>()
+    .AddSubscriptionType<Subscription>()
     .AddType<PlatformType>()
     .AddType<CommandType>()
     .AddFiltering()
     .AddSorting()
-    .AddMutationType<Mutation>()
-    .AddSubscriptionType<Subscription>()
     .AddInMemorySubscriptions();
 
 var app = builder.Build();

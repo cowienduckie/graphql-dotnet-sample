@@ -16,7 +16,7 @@ dotnet build
 dotnet run
 ```
 
-Built application runs on `http://localhost:5226/graphql` and `http://localhost:5226/graphql-voyager` for GUI schema
+Built application runs on `http://localhost:5300/graphql` and `http://localhost:5300/graphql-voyager` for GUI schema
 documentation.
 Use port `7007` for HTTPS.
 
@@ -28,5 +28,5 @@ To run the application, run the following command:
 docker compose -f ./docker-compose.yaml -p <your-project-name> up --build -d
 ```
 
-Built application runs on `http://localhost:5226/graphql` and `http://localhost:5226/graphql-voyager` for GUI schema
+Built application runs on `http://localhost:5300/graphql` and `http://localhost:5300/graphql-voyager` for GUI schema
 documentation.

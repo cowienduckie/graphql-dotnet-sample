@@ -30,6 +30,7 @@ public class PlatformType : ObjectType<Platform>
 
     private class Resolvers
     {
+        [UseOffsetPaging]
         public IQueryable<Command> GetCommands([Parent] Platform platform, AppDbContext context)
         {
             return context.Commands.Where(c => c.PlatformId == platform.Id);

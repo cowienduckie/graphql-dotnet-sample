@@ -5,6 +5,7 @@ namespace GraphQLSample.GraphQL;
 
 public class Query
 {
+    [UsePaging]
     [UseFiltering]
     [UseSorting]
     public IQueryable<Platform> GetPlatforms(AppDbContext context)
@@ -12,6 +13,7 @@ public class Query
         return context.Platforms;
     }
 
+    [UseOffsetPaging]
     [UseFiltering]
     [UseSorting]
     public IQueryable<Command> GetCommands(AppDbContext context)

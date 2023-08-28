@@ -11,12 +11,13 @@ public class Mutation
     public async Task<AddPlatformPayload> AddPlatformAsync(
         AddPlatformInput input,
         AppDbContext context,
-        ITopicEventSender eventSender,
+        [Service] ITopicEventSender eventSender,
         CancellationToken cancellationToken)
     {
         var platform = new Platform
         {
-            Name = input.Name
+            Name = input.Name,
+            Publisher = input.Publisher
         };
 
         context.Platforms.Add(platform);
